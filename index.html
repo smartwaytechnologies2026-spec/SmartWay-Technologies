@@ -24,22 +24,34 @@ body{
 header{
     background:linear-gradient(135deg,#004aad,#007bff);
     color:white;
-    padding:40px 20px;
-    text-align:center;
+    padding:30px 40px;
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
 .logo{
-    width:140px;
-    margin-bottom:15px;
+    width:200px;
 }
 
-header h1{
-    font-size:40px;
-    margin-bottom:10px;
+.header-text h1{
+    font-size:38px;
+    margin-bottom:8px;
 }
 
-header p{
-    font-size:18px;
+.header-text p{
+    font-size:16px;
+}
+
+/* Responsive Header */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+    .logo{
+        width:160px;
+    }
 }
 
 /* SLIDER */
@@ -128,10 +140,13 @@ footer a{
 
 <!-- HEADER -->
 <header>
-    <img src="https://github.com/smartwaytechnologies2026-spec/SmartWay-Technologies/blob/main/Logo3.jpg" alt="SmartWay Logo" class="logo">
-    <h1>SmartWay Technologies</h1>
-    <p>Full Stack Development | AI & LLM | Cloud | Data Science</p>
-    <p>100% Practical Training & Career Focused Programs</p>
+    <img src="https://github.com/smartwaytechnologies2026-spec/SmartWay-Technologies/blob/main/Logo3.jpg?raw=true" alt="SmartWay Logo" class="logo">
+    
+    <div class="header-text">
+        <h1>SmartWay Technologies</h1>
+        <p>Full Stack Development | AI & LLM | Cloud | Data Science</p>
+        <p>100% Practical Training & Career Focused Programs</p>
+    </div>
 </header>
 
 <!-- SLIDER -->
