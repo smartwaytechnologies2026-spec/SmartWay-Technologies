@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SmartWay Technologies</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
     margin:0;
@@ -18,15 +20,21 @@ body{
     color:#333;
 }
 
+/* HEADER */
 header{
     background:linear-gradient(135deg,#004aad,#007bff);
     color:white;
-    padding:60px 20px;
+    padding:40px 20px;
     text-align:center;
 }
 
+.logo{
+    width:140px;
+    margin-bottom:15px;
+}
+
 header h1{
-    font-size:42px;
+    font-size:40px;
     margin-bottom:10px;
 }
 
@@ -34,6 +42,28 @@ header p{
     font-size:18px;
 }
 
+/* SLIDER */
+.slider{
+    width:100%;
+    height:400px;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+/* SECTIONS */
 .section{
     padding:50px 20px;
     max-width:1100px;
@@ -44,21 +74,6 @@ header p{
     text-align:center;
     margin-bottom:30px;
     color:#004aad;
-}
-
-.course-category{
-    margin-bottom:40px;
-}
-
-.course-category h3{
-    margin-bottom:15px;
-    color:#007bff;
-}
-
-.course-category ul{
-    list-style-type:disc;
-    margin-left:20px;
-    line-height:1.8;
 }
 
 .cards{
@@ -79,6 +94,22 @@ header p{
     transform:translateY(-5px);
 }
 
+.course-category{
+    margin-bottom:40px;
+}
+
+.course-category h3{
+    margin-bottom:15px;
+    color:#007bff;
+}
+
+.course-category ul{
+    list-style-type:disc;
+    margin-left:20px;
+    line-height:1.8;
+}
+
+/* FOOTER */
 footer{
     background:#002855;
     color:white;
@@ -95,12 +126,22 @@ footer a{
 
 <body>
 
+<!-- HEADER -->
 <header>
+    <img src="Logo3.jpg" alt="SmartWay Logo" class="logo">
     <h1>SmartWay Technologies</h1>
     <p>Full Stack Development | AI & LLM | Cloud | Data Science</p>
     <p>100% Practical Training & Career Focused Programs</p>
 </header>
 
+<!-- SLIDER -->
+<section class="slider">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="slide active">
+    <img src="https://images.unsplash.com/photo-1537432376769-00a9054e1c43" class="slide">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" class="slide">
+</section>
+
+<!-- SCHOOL COURSES -->
 <section class="section">
     <h2>Courses for School Students</h2>
     <div class="cards">
@@ -130,6 +171,7 @@ footer a{
     </div>
 </section>
 
+<!-- COLLEGE COURSES -->
 <section class="section">
     <h2>Courses for College Students</h2>
 
@@ -138,17 +180,17 @@ footer a{
         <ul>
             <li>Android App Development (Android Studio)</li>
             <li>Full Stack Development (Java / Python)</li>
-            <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
-            <li>Front-End (HTML, CSS, Bootstrap, JavaScript, jQuery)</li>
+            <li>MERN Stack</li>
+            <li>Front-End (HTML, CSS, Bootstrap, JavaScript)</li>
         </ul>
     </div>
 
     <div class="course-category">
         <h3>Programming Languages</h3>
         <ul>
-            <li>Python & Advanced Python (Django, Flask)</li>
-            <li>Java & Advanced Java (Spring Boot)</li>
-            <li>PHP (WordPress, CodeIgniter, Laravel)</li>
+            <li>Python & Advanced Python</li>
+            <li>Java & Advanced Java</li>
+            <li>PHP</li>
             <li>C, C++</li>
         </ul>
     </div>
@@ -158,7 +200,7 @@ footer a{
         <ul>
             <li>MS SQL, MySQL, MongoDB, PostgreSQL</li>
             <li>AWS Cloud Foundation</li>
-            <li>Microsoft Azure Data Cloud Fundamentals</li>
+            <li>Microsoft Azure</li>
             <li>Git & GitHub</li>
         </ul>
     </div>
@@ -167,7 +209,6 @@ footer a{
         <h3>Advanced Technologies</h3>
         <ul>
             <li>Data Science Using Python</li>
-            <li>Data Analytics Using Python</li>
             <li>Artificial Intelligence & Machine Learning</li>
             <li>IoT Using Python</li>
             <li>Software Testing & API Testing</li>
@@ -177,12 +218,27 @@ footer a{
 
 </section>
 
+<!-- FOOTER -->
 <footer>
     <h2>Contact Us</h2>
     <p>📞 8148786537 | 9159399145</p>
     <p>📧 <a href="mailto:smartwaytechnologies2026@gmail.com">smartwaytechnologies2026@gmail.com</a></p>
     <p>SmartWay Technologies</p>
 </footer>
+
+<!-- SLIDER SCRIPT -->
+<script>
+let slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function showSlide(){
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[current].classList.add('active');
+    current = (current + 1) % slides.length;
+}
+
+setInterval(showSlide, 3000);
+</script>
 
 </body>
 </html>
