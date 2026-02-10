@@ -24,34 +24,28 @@ body{
 header{
     background:linear-gradient(135deg,#004aad,#007bff);
     color:white;
-    padding:30px 40px;
+    padding:20px 40px;
+}
+
+.header-container{
     display:flex;
     align-items:center;
     gap:30px;
+    max-width:1200px;
+    margin:auto;
 }
 
 .logo{
-    width:200px;
+    width:220px;   /* Increased Logo Size */
 }
 
 .header-text h1{
-    font-size:38px;
+    font-size:40px;
     margin-bottom:8px;
 }
 
 .header-text p{
-    font-size:16px;
-}
-
-/* Responsive Header */
-@media(max-width:768px){
-    header{
-        flex-direction:column;
-        text-align:center;
-    }
-    .logo{
-        width:160px;
-    }
+    font-size:18px;
 }
 
 /* SLIDER */
@@ -115,8 +109,8 @@ header{
     color:#007bff;
 }
 
-.course-category ul{
-    list-style-type:disc;
+.course-category ul,
+.card ul{
     margin-left:20px;
     line-height:1.8;
 }
@@ -133,6 +127,26 @@ footer a{
     color:#00c3ff;
     text-decoration:none;
 }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .header-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logo{
+        width:180px;
+    }
+
+    .slider{
+        height:250px;
+    }
+
+    .slide{
+        height:250px;
+    }
+}
 </style>
 </head>
 
@@ -140,12 +154,13 @@ footer a{
 
 <!-- HEADER -->
 <header>
-    <img src="https://github.com/smartwaytechnologies2026-spec/SmartWay-Technologies/blob/main/Logo3.jpg?raw=true" alt="SmartWay Logo" class="logo">
-    
-    <div class="header-text">
-        <h1>SmartWay Technologies</h1>
-        <p>Full Stack Development | AI & LLM | Cloud | Data Science</p>
-        <p>100% Practical Training & Career Focused Programs</p>
+    <div class="header-container">
+        <img src="https://github.com/smartwaytechnologies2026-spec/SmartWay-Technologies/blob/main/Logo3.jpg" alt="SmartWay Logo" class="logo">
+        <div class="header-text">
+            <h1>SmartWay Technologies</h1>
+            <p>Full Stack Development | AI & LLM | Cloud | Data Science</p>
+            <p>100% Practical Training & Career Focused Programs</p>
+        </div>
     </div>
 </header>
 
