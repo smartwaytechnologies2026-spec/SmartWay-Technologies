@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartWay Technologies</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#004aad,#007bff);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+}
+
+.section{
+    padding:50px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#004aad;
+}
+
+.course-category{
+    margin-bottom:40px;
+}
+
+.course-category h3{
+    margin-bottom:15px;
+    color:#007bff;
+}
+
+.course-category ul{
+    list-style-type:disc;
+    margin-left:20px;
+    line-height:1.8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+footer{
+    background:#002855;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+footer a{
+    color:#00c3ff;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SmartWay Technologies</h1>
+    <p>Full Stack Development | AI & LLM | Cloud | Data Science</p>
+    <p>100% Practical Training & Career Focused Programs</p>
+</header>
+
+<section class="section">
+    <h2>Courses for School Students</h2>
+    <div class="cards">
+
+        <div class="card">
+            <h3>Basic Computer Skills</h3>
+            <ul>
+                <li>MS Word</li>
+                <li>MS Excel</li>
+                <li>MS PowerPoint</li>
+                <li>Operating System Basics</li>
+                <li>Typing Skills</li>
+                <li>Internet & Cyber Safety</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Graphics & Programming</h3>
+            <ul>
+                <li>Adobe Photoshop Basics</li>
+                <li>Paint</li>
+                <li>Python Basics</li>
+                <li>C Programming Basics</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2>Courses for College Students</h2>
+
+    <div class="course-category">
+        <h3>Development Programs</h3>
+        <ul>
+            <li>Android App Development (Android Studio)</li>
+            <li>Full Stack Development (Java / Python)</li>
+            <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
+            <li>Front-End (HTML, CSS, Bootstrap, JavaScript, jQuery)</li>
+        </ul>
+    </div>
+
+    <div class="course-category">
+        <h3>Programming Languages</h3>
+        <ul>
+            <li>Python & Advanced Python (Django, Flask)</li>
+            <li>Java & Advanced Java (Spring Boot)</li>
+            <li>PHP (WordPress, CodeIgniter, Laravel)</li>
+            <li>C, C++</li>
+        </ul>
+    </div>
+
+    <div class="course-category">
+        <h3>Databases & Cloud</h3>
+        <ul>
+            <li>MS SQL, MySQL, MongoDB, PostgreSQL</li>
+            <li>AWS Cloud Foundation</li>
+            <li>Microsoft Azure Data Cloud Fundamentals</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </div>
+
+    <div class="course-category">
+        <h3>Advanced Technologies</h3>
+        <ul>
+            <li>Data Science Using Python</li>
+            <li>Data Analytics Using Python</li>
+            <li>Artificial Intelligence & Machine Learning</li>
+            <li>IoT Using Python</li>
+            <li>Software Testing & API Testing</li>
+            <li>Portfolio Preparation</li>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    <h2>Contact Us</h2>
+    <p>📞 8148786537 | 9159399145</p>
+    <p>📧 <a href="mailto:smartwaytechnologies2026@gmail.com">smartwaytechnologies2026@gmail.com</a></p>
+    <p>SmartWay Technologies</p>
+</footer>
+
+</body>
+</html>
