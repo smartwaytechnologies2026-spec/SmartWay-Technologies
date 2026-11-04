@@ -1,314 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartWay Technologies</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f5f7fa;
-color:#333;
-}
-
-/* HEADER */
-
-header{
-background:linear-gradient(135deg,#004aad,#007bff);
-color:white;
-padding:20px 40px;
-}
-
-.header-container{
-display:flex;
-flex-direction:column;
-align-items:center;
-text-align:center;
-max-width:1200px;
-margin:auto;
-}
-
-.logo{
-width:220px;
-margin-bottom:10px;
-}
-
-.header-text h1{
-font-size:40px;
-margin-bottom:8px;
-}
-
-.header-text p{
-font-size:18px;
-}
-
-/* SLIDER */
-
-.slider{
-width:100%;
-height:400px;
-position:relative;
-overflow:hidden;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:400px;
-object-fit:cover;
-opacity:0;
-transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-opacity:1;
-}
-
-/* SECTIONS */
-
-.section{
-padding:50px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.section h2{
-text-align:center;
-margin-bottom:30px;
-color:#004aad;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.course-category{
-margin-bottom:40px;
-}
-
-.course-category h3{
-margin-bottom:15px;
-color:#007bff;
-}
-
-.course-category ul,
-.card ul{
-margin-left:20px;
-line-height:1.8;
-}
-
-/* FOOTER */
-
-footer{
-background:#002855;
-color:white;
-padding:30px 20px;
-text-align:center;
-}
-
-footer a{
-color:#00c3ff;
-text-decoration:none;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.logo{
-width:180px;
-}
-
-.slider{
-height:250px;
-}
-
-.slide{
-height:250px;
-}
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SMARTWAY TECHNOLOGIES - Computer Software Training Center and App Development. Practical training for school and college students.">
+  <title>SMARTWAY TECHNOLOGIES | Computer Training</title>
+  <style>
+    :root {
+      --navy: #082d68;
+      --blue: #0878d1;
+      --sky: #eaf7ff;
+      --orange: #ff6a21;
+      --yellow: #ffdc45;
+      --ink: #15243a;
+      --muted: #5b6b80;
+      --white: #fff;
+      --shadow: 0 12px 30px rgba(8, 45, 104, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #f5faff;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 9px 5%;
+      text-align: center;
+      font-size: .9rem;
+    }
+    header {
+      background: linear-gradient(125deg, #e5f6ff, #fff 55%, #fff2df);
+      padding: 22px 5% 38px;
+      border-bottom: 4px solid var(--yellow);
+    }
+    nav {
+      max-width: 1120px;
+      margin: 0 auto 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      color: var(--navy);
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-decoration: none;
+      line-height: 1.1;
+    }
+    .brand span { display: block; color: var(--orange); font-size: .72em; }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    nav a { text-decoration: none; font-weight: 700; color: var(--navy); }
+    nav a:hover { color: var(--orange); }
+    .hero {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      align-items: center;
+      gap: 35px;
+    }
+    .eyebrow {
+      display: inline-block;
+      background: #d7efff;
+      color: var(--navy);
+      border-radius: 30px;
+      padding: 7px 14px;
+      font-weight: 800;
+      font-size: .85rem;
+    }
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: 1.03;
+      margin: 18px 0 8px;
+      letter-spacing: -2px;
+    }
+    h1 span { color: var(--orange); display: block; }
+    .hero p { color: var(--muted); font-size: 1.08rem; max-width: 650px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 30px;
+      padding: 12px 21px;
+      text-decoration: none;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .primary { color: white; background: var(--blue); }
+    .secondary { color: var(--navy); background: white; border: 2px solid #b9ddf5; }
+    .placement {
+      background: linear-gradient(145deg, #fff, #e5f5ff);
+      border: 2px solid #b9ddf5;
+      border-radius: 28px;
+      padding: 30px 22px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .placement strong { display: block; color: var(--orange); font-size: 3.2rem; line-height: 1; }
+    .placement b { color: var(--navy); font-size: 1.1rem; }
+    .placement p { margin-bottom: 0; font-size: .9rem; }
+    .strip {
+      max-width: 1120px;
+      margin: -18px auto 0;
+      padding: 18px 24px;
+      background: var(--navy);
+      color: white;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .strip strong { color: var(--yellow); }
+    main { max-width: 1120px; margin: 55px auto; padding: 0 22px; }
+    .section-heading { text-align: center; margin-bottom: 28px; }
+    .section-heading h2 { color: var(--navy); font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 5px; }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .course-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .course-card {
+      background: white;
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid #dceaf5;
+      box-shadow: var(--shadow);
+    }
+    .course-card h3 { color: var(--navy); margin: 0 0 14px; font-size: 1.25rem; }
+    .course-card h4 { color: var(--orange); margin: 18px 0 5px; }
+    .course-card h4:first-of-type { margin-top: 0; }
+    .course-card ul { margin: 0; padding-left: 21px; color: #405168; }
+    .course-card li { margin: 3px 0; }
+    .tag {
+      display: inline-block;
+      background: #e9f5ff;
+      color: var(--navy);
+      padding: 5px 10px;
+      margin: 4px 4px 0 0;
+      border-radius: 20px;
+      font-size: .86rem;
+      font-weight: 700;
+    }
+    .contact {
+      background: linear-gradient(130deg, #082d68, #086fc0);
+      color: white;
+      padding: 35px;
+      border-radius: 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 25px;
+    }
+    .contact h2 { margin: 0 0 8px; font-size: 2rem; }
+    .contact p { margin: 5px 0; color: #e4f3ff; }
+    .contact a { color: var(--yellow); font-weight: 700; text-decoration: none; }
+    .contact .btn { background: var(--yellow); color: var(--navy); white-space: nowrap; }
+    footer { text-align: center; padding: 24px 15px; background: #061f4b; color: white; }
+    footer strong { color: var(--yellow); }
+    #backTop {
+      position: fixed; right: 18px; bottom: 18px; display: none;
+      border: 0; border-radius: 50%; width: 46px; height: 46px;
+      background: var(--orange); color: white; font-size: 1.2rem;
+      cursor: pointer; box-shadow: var(--shadow);
+    }
+    @media (max-width: 760px) {
+      nav { align-items: flex-start; flex-direction: column; margin-bottom: 25px; }
+      nav ul { gap: 12px 18px; }
+      .hero, .course-grid, .contact { grid-template-columns: 1fr; }
+      .placement { max-width: 360px; }
+      .strip { margin: 15px 18px 0; }
+      main { margin: 42px auto; }
+      .contact { padding: 26px; }
+      .contact .btn { justify-self: start; }
+    }
+    @media (max-width: 420px) {
+      header { padding-left: 20px; padding-right: 20px; }
+      .course-card { padding: 19px; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="topbar">Practical Computer Training • School & College Courses • App Development</div>
 
-<!-- HEADER -->
+  <header id="home">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">SMARTWAY <span>TECHNOLOGIES</span></a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-<header>
-<div class="header-container">
-<img src="https://raw.githubusercontent.com/smartwaytechnologies2026-spec/SmartWay-Technologies/8575eb6fda6ddec69af21cbab07ea6f2ff986454/Logo11.jpg"
-alt="SmartWay Logo" class="logo">
-<div class="header-text">
-<h1>SmartWay Technologies</h1>
-<p>Full Stack Development | AI & LLM | Cloud | Data Science</p>
-<p>100% Practical Training & Career Focused Programs</p>
-</div>
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Computer Software Training Center & App Development</span>
+        <h1>Build Skills.<span>Build Your Future.</span></h1>
+        <p>உங்கள் எதிர்காலத்தை உருவாக்கும் சிறந்த கணினி பயிற்சி மையம்.</p>
+        <p>We provide <strong>100% practical training</strong> and individual course programs for school and college students.</p>
+        <div class="actions">
+          <a class="btn primary" href="#courses">Explore Courses</a>
+          <a class="btn secondary" href="tel:8148786537">Call Now</a>
+        </div>
+      </div>
+      <aside class="placement">
+        <strong>100%</strong>
+        <b>Placement Assistance</b>
+        <p>Learn with practical training and move towards your bright future.</p>
+      </aside>
+    </div>
+  </header>
 
-</div>
-</header>
+  <div class="strip">Learn today. Lead tomorrow. <strong>Your success starts with a skill!</strong></div>
 
-<!-- SLIDER -->
+  <main>
+    <section id="courses">
+      <div class="section-heading">
+        <h2>Our Courses</h2>
+        <p>Training programs for school students, college students and aspiring developers.</p>
+      </div>
 
-<section class="slider">
+      <div class="course-grid">
+        <article class="course-card">
+          <h3>🎓 School Students</h3>
+          <h4>MS Office Tools & Paint</h4>
+          <ul><li>MS Word</li><li>MS Excel</li><li>MS PowerPoint</li></ul>
+          <h4>Computer Fundamentals</h4>
+          <ul><li>Operating System Basics (OS)</li><li>Typing and Keyboard Skills</li><li>Internet and Computer Safety</li></ul>
+        </article>
 
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="slide active">
+        <article class="course-card">
+          <h3>💻 Front-End Development</h3>
+          <div class="tag">HTML</div><div class="tag">CSS</div><div class="tag">Bootstrap</div>
+          <div class="tag">JavaScript</div><div class="tag">jQuery</div>
+          <h4>Programming Languages</h4>
+          <ul><li>Python & Advanced Python (Django, Flask)</li><li>Java & Advanced Java</li><li>PHP</li><li>C and C++</li></ul>
+        </article>
 
-<img src="https://soliloquywp.com/wp-content/uploads/2018/11/nb_ist_cover.jpg" class="slide">
+        <article class="course-card">
+          <h3>🏫 College Students</h3>
+          <h4>Full Stack Development</h4>
+          <ul><li>Java</li><li>Python</li></ul>
+          <h4>MERN Stack Development</h4>
+          <ul><li>MongoDB</li><li>Express.js</li><li>React.js</li><li>Node.js</li></ul>
+          <h4>Databases</h4>
+          <ul><li>MS SQL</li><li>MySQL</li><li>MongoDB</li></ul>
+        </article>
 
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" class="slide">
+        <article class="course-card">
+          <h3>☁️ Advanced Technologies</h3>
+          <h4>Cloud Computing</h4>
+          <ul><li>AWS Cloud Foundation</li><li>Microsoft Azure Data Cloud Fundamentals</li></ul>
+          <h4>App Development</h4>
+          <ul><li>Android App Development (Android Studio)</li></ul>
+          <h4>Data & Artificial Intelligence</h4>
+          <ul><li>Data Science</li><li>Artificial Intelligence (AI) & Machine Learning (ML)</li></ul>
+          <h4>Other Courses</h4>
+          <ul><li>Graphics: Adobe Photoshop, CorelDRAW</li><li>Tally and Tally Prime</li></ul>
+        </article>
+      </div>
+    </section>
 
-</section>
+    <section id="contact" style="margin-top:55px">
+      <div class="contact">
+        <div>
+          <h2>Get in Touch</h2>
+          <p><strong>SMARTWAY TECHNOLOGIES</strong></p>
+          <p>📞 <a href="tel:8148786537">8148786537</a> · <a href="tel:9159399145">9159399145</a></p>
+          <p>✉️ <a href="mailto:smartwaytechnologies2026@gmail.com">smartwaytechnologies2026@gmail.com</a></p>
+          <p>📍 சிவராம் ஜுவல்லரி மேல்மாடி, பஸ் நிலையம் எதிரில், பு.புளியம்பட்டி</p>
+        </div>
+        <a class="btn" href="https://wa.me/918148786537?text=Hello%20Smartway%20Technologies%2C%20I%20want%20to%20know%20about%20your%20courses." target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </section>
+  </main>
 
-<!-- SCHOOL COURSES -->
+  <footer>Best of Luck For Your <strong>Bright Future!</strong><br><small>© <span id="year"></span> SMARTWAY TECHNOLOGIES</small></footer>
+  <button id="backTop" aria-label="Back to top" title="Back to top">↑</button>
 
-<section class="section">
+  <script>
+    // Show the current year automatically.
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<h2>Courses for School Students</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Basic Computer Skills</h3>
-<ul>
-<li>MS Word</li>
-<li>MS Excel</li>
-<li>MS PowerPoint</li>
-<li>Operating System Basics</li>
-<li>Typing Skills</li>
-<li>Internet & Cyber Safety</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Graphics & Programming</h3>
-<ul>
-<li>Adobe Photoshop Basics</li>
-<li>Paint</li>
-<li>Python Basics</li>
-<li>C Programming Basics</li>
-</ul>
-</div>
-
-</div>
-
-</section>
-
-<!-- COLLEGE COURSES -->
-
-<section class="section">
-
-<h2>Courses for College Students</h2>
-
-<div class="course-category">
-<h3>Development Programs</h3>
-<ul>
-<li>Android App Development (Android Studio)</li>
-<li>Full Stack Development (Java / Python)</li>
-<li>MERN Stack</li>
-<li>Front-End (HTML, CSS, Bootstrap, JavaScript)</li>
-</ul>
-</div>
-
-<div class="course-category">
-<h3>Programming Languages</h3>
-<ul>
-<li>Python & Advanced Python</li>
-<li>Java & Advanced Java</li>
-<li>PHP</li>
-<li>C, C++</li>
-</ul>
-</div>
-
-<div class="course-category">
-<h3>Databases & Cloud</h3>
-<ul>
-<li>MS SQL, MySQL, MongoDB, PostgreSQL</li>
-<li>AWS Cloud Foundation</li>
-<li>Microsoft Azure</li>
-<li>Git & GitHub</li>
-</ul>
-</div>
-
-<div class="course-category">
-<h3>Advanced Technologies</h3>
-<ul>
-<li>Data Science Using Python</li>
-<li>Artificial Intelligence & Machine Learning</li>
-<li>IoT Using Python</li>
-<li>Software Testing & API Testing</li>
-<li>Portfolio Preparation</li>
-</ul>
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<h2>Contact Us</h2>
-
-<p>📞 8148786537 | 9159399145</p>
-
-<p>📧 
-<a href="mailto:smartwaytechnologies2026@gmail.com">
-smartwaytechnologies2026@gmail.com
-</a>
-</p>
-
-<p>SmartWay Technologies</p>
-
-</footer>
-
-<!-- SLIDER SCRIPT -->
-
-<script>
-
-let slides=document.querySelectorAll('.slide');
-let current=0;
-
-function showSlide(){
-
-slides.forEach(slide=>{
-slide.classList.remove('active');
-});
-
-slides[current].classList.add('active');
-
-current=(current+1)%slides.length;
-
-}
-
-setInterval(showSlide,3000);
-
-</script>
-
+    // Show the back-to-top button after scrolling down.
+    const backTop = document.getElementById("backTop");
+    window.addEventListener("scroll", () => {
+      backTop.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
